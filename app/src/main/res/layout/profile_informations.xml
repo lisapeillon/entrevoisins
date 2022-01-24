@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_neighbour_detail"
+    tools:context=".ui.neighbour_list.NeighbourDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/profile_margin_vertical">
+
+            <TextView
+                android:id="@+id/profile_informations_textview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prénom"
+                android:textColor="#000"
+                android:textSize="25sp"
+                android:layout_marginHorizontal="@dimen/profile_margin_horizontal_about"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/profile_informations_textview_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/profile_informations_linearlayout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/profile_margin_horizontal"
+                android:orientation="horizontal"
+                android:layout_marginVertical="@dimen/profile_margin_vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_informations_textview_name">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:id="@+id/profile_informations_textview_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adresse"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_informations_linearlayout_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/profile_margin_horizontal"
+                android:layout_marginVertical="@dimen/profile_margin_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_informations_linearlayout_location">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:src="@drawable/ic_phone" />
+
+                <TextView
+                    android:id="@+id/profile_informations_textview_phonenumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+33 6 00 00 00 00"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_informations_linearlayout_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/profile_margin_horizontal"
+                android:layout_marginVertical="@dimen/profile_margin_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_informations_linearlayout_phone">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="16dp"
+                    android:src="@drawable/ic_social_network" />
+
+                <TextView
+                    android:id="@+id/profile_informations_textview_facebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="www.facebook.fr/"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/profile_margin_vertical">
+
+            <TextView
+                android:id="@+id/profile_informations_textview_titleabout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A propos de moi"
+                android:textSize="25sp"
+                android:layout_marginHorizontal="@dimen/profile_margin_horizontal_about"
+                android:textColor="#000"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/background"
+                app:layout_constraintTop_toBottomOf="@id/profile_informations_textview_titleabout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/profile_informations_textview_aproposdemoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ceci est la section a propos de moi où on trouve des infos à propos de moi"
+                android:textSize="20sp"
+                android:layout_marginHorizontal="@dimen/profile_margin_horizontal_about"
+                android:layout_marginVertical="@dimen/profile_margin_vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_informations_textview_titleabout"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
